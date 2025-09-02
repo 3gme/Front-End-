@@ -39,7 +39,11 @@ body {
     font-size: smaller;
 }
 .smaller-font {
-    font-size: 8px;
+    font-size: 18px;
+}
+
+.h-1-size {
+    font-size:2.5em
 }
 
 /* our clients */
@@ -55,16 +59,26 @@ body {
     grid-template-columns: repeat(7, 1fr);
 }
 
+.clients div img {
+    height: 100%;
+    width: 45%;
+    object-fit: contain;
+}
+
 /* community */
+.Community {
+    padding-bottom: 5%;
+}
+
 .community-parent {
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto auto auto;
     grid-auto-flow: row;
-    gap: 20px;
+    gap: 10%;
     justify-content: space-evenly;
-    margin-top: 5%;
+    margin-top: 3%;
     padding: 0px 5%;
 }
 
@@ -75,8 +89,13 @@ body {
     border-radius: 5px;
 }
 
+.community-parent .community-child img {
+    width: 25%;
+}
+
 /* The-unseen */
 .The-unseen {
+    padding: 5% 0;
     width: 90%;
     margin: 0 auto;
     display: grid;
@@ -126,7 +145,7 @@ body {
 .Helping .small-divs {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .Helping .child{
@@ -137,11 +156,27 @@ body {
 
 .child img {
     margin-right: 10px;
+    width: 15%;
+}
+
+.big-font {
+    font-size: 1.8em;
+}
+
+.p-top {
+    padding-top: 10px;
 }
 
 /* ------- */
 
+.Tim-smith {
+    width: 100% !important;
+    padding: 0% 5%;
+    background-color: #F5F7FA;
+}
+
 .Tim-smith .parent{
+    margin-top: 3%;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit , minmax(50px , auto))
@@ -151,27 +186,102 @@ body {
 }
 
 .Tim-smith .parent img {
+    width: 50%;
     object-fit: contain;
 }
-.parent :last-child{
+.Tim-smith .parent :last-child{
     grid-column: span 2;
+}
 
+/* ---caring--- */
+
+.caring {
+    width: 100%;
+    padding: 5%;
+}
+
+.caring .text {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.caring .text h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.caring .parent {
+  display: grid;
+  gap:90px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  width: 100%;
+  margin-top: 5%;
+}
+
+.caring .parent .child{
+    position: relative;
+}
+
+.caring .parent .child .floating{
+    position: absolute;
+    padding: 2%;
+    padding-bottom: 4%;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.4);
+    
+    width: 70%;
+    bottom: -15%;
+    left: 15%;
+    height: fit-content;
+
+    text-align: center;
+    background-color: #F5F7FA;
+}
+
+.caring .parent .child .floating p{
+    margin-bottom: 10px;
+}
+.caring .parent .child .floating a {
+    display: block;
+    width: 40%;
+    margin: auto;
+    text-decoration: none;
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.caring .parent .child .floating a::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+.caring .parent .child .floating a:hover::before {
+    transform: translateX(100%);
+}
+
+.caring .parent .child img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+.mt-1 {
+    margin-top: 1%;
+}
 .mt-3 {
     margin-top: 3%;
 }
