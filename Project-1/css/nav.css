@@ -1,11 +1,11 @@
 .navbar {
     width: 100%; 
     margin: 0 auto;
-    padding: 7px 5%;
+    padding: 7px 0 7px 5%;
     background-color: white;
 
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 60% 100px;
 
     position: sticky;
     top: 0%;
@@ -32,6 +32,16 @@
     padding: 7px 15px;
 }
 
+.navbar button {
+    width: 100%;
+    margin-left: auto;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: white;
+    
+}
+
 .navbar .links li:nth-child(6){
     background-color: var(--primary-color);
     border-radius: 5px;
@@ -45,4 +55,24 @@
     text-decoration: none;
     font-size: 13px;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        max-width: 768px;
+    }
+    .navbar .links {
+        display: none;
+    }
+    .navbar button{
+        grid-template-columns: 1fr 1fr;
+        width: 130px;
+        justify-self: end;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        flex-direction: row;
+    }
 }

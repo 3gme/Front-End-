@@ -56,7 +56,7 @@ body {
 
 .clients {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(100px , 150px));
 }
 
 .clients div img {
@@ -101,8 +101,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-    grid-template-rows: auto auto auto;
-    grid-auto-flow: row;
 }
 
 .The-unseen .left {
@@ -133,7 +131,6 @@ body {
     width: 100%;
     padding: 5% 5%;
     background-color: #F5F7FA;
-    margin: auto;
 
 
     display: grid;
